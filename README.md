@@ -5,6 +5,12 @@
 Recursive Language Models
 </h1>
 
+<p align="center">
+  <a href="https://arxiv.org/abs/2512.24601">Full Paper</a> •
+  <a href="https://alexzhang13.github.io/blog/2025/rlm/">Blogpost</a>
+</p>
+
+
 ## Overview
 Recursive Language Models (RLMs) are a task-agnostic inference paradigm for language models (LMs) to handle near-infinite length contexts by enabling the LM to *programmatically* examine, decompose, and recursively call itself over its input. RLMs replace the canonical `llm.completion(prompt, model)` call with a `rlm.completion(prompt, model)` call. RLMs offload the context as a variable in a REPL environment that the LM can interact with and launch sub-LM calls inside of.
 
@@ -75,12 +81,14 @@ We currently support most major clients (OpenAI, Anthropic), as well as the rout
 If you use this code or repository in your research, please cite:
 
 ```bibtex
-@misc{az_rlm_2025,
-  author       = {Alex L. Zhang},
-  title        = {Recursive Language Models},
-  howpublished = {\url{https://github.com/alexzhang13/rlm}},
-  note         = {Commit abcdefg • accessed DD Mon YYYY},
-  year         = {2025}
+@misc{zhang2025recursivelanguagemodels,
+      title={Recursive Language Models}, 
+      author={Alex L. Zhang and Tim Kraska and Omar Khattab},
+      year={2025},
+      eprint={2512.24601},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2512.24601}, 
 }
 ```
 
